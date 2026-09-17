@@ -77,21 +77,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "HK Concierge & Bridge · Conciergerie à Hong Kong" },
+      {
+        name: "description",
+        content:
+          "Sept services de conciergerie à Hong Kong : installation, protection, garde d'enfants, réservations et démarches administratives.",
+      },
+      { property: "og:title", content: "HK Concierge & Bridge" },
+      {
+        property: "og:description",
+        content: "Votre pont vers Hong Kong : sept services de conciergerie, un seul numéro.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
